@@ -30,7 +30,7 @@ Reading is filtering to get only data from 2007-02-01 to 2007-02-02 included
 ## Results
 4 scripts to generate 4 graphics as asked in README.md.
  * Scripts ```plotX.R``` (for ```X``` 1 to 4)
- * Images ```plotX.png``` (for ```X``` 1 to 4)
+ * Results Images ```plotX.png``` (for ```X``` 1 to 4)
  
  ## Terms
   * This work has been performed with RStudio Version 1.1.463 on Mac OS X 10.14.4
