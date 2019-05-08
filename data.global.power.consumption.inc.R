@@ -1,8 +1,6 @@
-
-## Plot 1 : Global Active Power, between 1rst and 2nd february, 2007
-
-# Constructuct data from data source is included in a common R file
-# source("data.global.power.consumption.inc.R")
+## Common include file to construct data from data source
+# Called by plot1.R, plot2.R, plot3.R, plot4.R
+# Init the dataframe df_hpc (Household Power Consumption Dataframe)
 
 library(dplyr)
 library(lubridate)
@@ -52,9 +50,3 @@ df_hpc$V1 <-  as.POSIXlt(dmy_hms(as.character(paste(df_hpc$V1,df_hpc$V2))), form
 # Remove V2 (time column)
 df_hpc$V2 <- NULL
 names(df_hpc) <- c("date.time","active.power","reactive.power","voltage","intensity","submetering.1","submetering.2","submetering.3")
-
-
-# plot png file
-png(file = "plot1.png", width = 480, height = 480, units = "px")
-with(df_hpc,hist(active.power,col = "red", main="Global Active Power", xlab = "Global Active Power (kilowatts)"))
-dev.off()

@@ -1,5 +1,5 @@
 
-## Plot 1 : Global Active Power, between 1rst and 2nd february, 2007
+## Plot 4 : Grid of 4 graphics
 
 # Constructuct data from data source is included in a common R file
 # source("data.global.power.consumption.inc.R")
@@ -55,6 +55,23 @@ names(df_hpc) <- c("date.time","active.power","reactive.power","voltage","intens
 
 
 # plot png file
-png(file = "plot1.png", width = 480, height = 480, units = "px")
-with(df_hpc,hist(active.power,col = "red", main="Global Active Power", xlab = "Global Active Power (kilowatts)"))
+png(file = "plot4.png", width = 480, height = 480, units = "px")
+
+par(mfcol = c(2,2))
+
+## First graphic top.left, the same as plot2.R
+with(df_hpc,plot(date.time, active.power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
+
+## Second graphic bottom.left, the same as plot3.R
+with(df_hpc,plot(date.time, submetering.1, type = "l", xlab = "", ylab = "Energy Submetering", col="black"))
+with(df_hpc,points(date.time, submetering.2, type = "l", col="red"))
+with(df_hpc,points(date.time, submetering.3, type = "l", col="blue"))
+with(df_hpc,legend(x = "topright", legend = names(df_hpc[6:8]), col=c("black","red","blue"), lty=1, lwd=1))
+
+## Third graphic top.right, Voltage
+with(df_hpc,plot(date.time, voltage, type = "l"))
+
+## Fourth graphic bottom.right, Reactive Power
+with(df_hpc,plot(date.time, reactive.power, type = "l"))
+
 dev.off()

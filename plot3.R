@@ -1,5 +1,5 @@
 
-## Plot 1 : Global Active Power, between 1rst and 2nd february, 2007
+## Plot 3 : Energy per submetrings, between 1rst and 2nd february, 2007
 
 # Constructuct data from data source is included in a common R file
 # source("data.global.power.consumption.inc.R")
@@ -55,6 +55,9 @@ names(df_hpc) <- c("date.time","active.power","reactive.power","voltage","intens
 
 
 # plot png file
-png(file = "plot1.png", width = 480, height = 480, units = "px")
-with(df_hpc,hist(active.power,col = "red", main="Global Active Power", xlab = "Global Active Power (kilowatts)"))
+png(file = "plot3.png", width = 480, height = 480, units = "px")
+with(df_hpc,plot(date.time, submetering.1, type = "l", xlab = "", ylab = "Energy Submetering", col="black"))
+with(df_hpc,points(date.time, submetering.2, type = "l", col="red"))
+with(df_hpc,points(date.time, submetering.3, type = "l", col="blue"))
+with(df_hpc,legend(x = "topright", legend = names(df_hpc[6:8]), col=c("black","red","blue"), lty=1, lwd=1))
 dev.off()

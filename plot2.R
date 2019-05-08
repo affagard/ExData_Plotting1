@@ -1,5 +1,5 @@
 
-## Plot 1 : Global Active Power, between 1rst and 2nd february, 2007
+## Plot 2 : Global Active Power in time, between 1rst and 2nd february, 2007
 
 # Constructuct data from data source is included in a common R file
 # source("data.global.power.consumption.inc.R")
@@ -55,6 +55,6 @@ names(df_hpc) <- c("date.time","active.power","reactive.power","voltage","intens
 
 
 # plot png file
-png(file = "plot1.png", width = 480, height = 480, units = "px")
-with(df_hpc,hist(active.power,col = "red", main="Global Active Power", xlab = "Global Active Power (kilowatts)"))
+png(file = "plot2.png", width = 480, height = 480, units = "px")
+with(df_hpc,plot(date.time, active.power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 dev.off()
