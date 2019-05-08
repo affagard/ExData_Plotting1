@@ -15,8 +15,8 @@ To ease rewiewing, code of this script has been pasted in each script, as asked.
 
  * ```df_hpc```: Dataframe result of reading for Household Power Consumption
  	* ```date.time``` : POSIXlt, Date and time of the measure, format Y-m-d HH:MM:OS
- 	* ```active.power``` : Numeric, instant active power drawn off
- 	* ```reactive.power``` : Numeric, instant reactive power returned
+ 	* ```active.power``` : Numeric, instant global active power drawn off, unit = kilowatt (kW)
+ 	* ```reactive.power``` : Numeric, instant global reactive power returned , unit = kilo-volt-ampere-reactive (kVAr)
  	* ```voltage``` : Numeric, instant voltage, unit = volt (V)
  	* ```intensity``` :  Numeric, instant intensity, unit = ampere (A)
  	* ```submetering.1``` :  Numeric, energy read on submetering 1, unit = watt hour (Wh)
