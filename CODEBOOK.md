@@ -3,6 +3,7 @@ Exploratory Data Analysis - Peer-graded Assignment: Course Project 1
 
 ## Subject
 In a way of exploratory data, construct 4 plots in 4 PNG files from “Individual household electric power consumption Data Set”
+
 Detailed instructions are listed in README.md
 
 
@@ -10,8 +11,11 @@ Detailed instructions are listed in README.md
 <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> [20Mb]
 
 ## Reading data source
+
 A single script ```data.global.power.consumption.inc.R``` load  and read data source. It may be called in scripts with ```source("data.global.power.consumption.inc.R")```.
 To ease rewiewing, code of this script has been pasted in each script, as asked.
+
+Reading is filtering to get only data from 2007-02-01 to 2007-02-02 included
 
  * ```df_hpc```: Dataframe result of reading for Household Power Consumption
  	* ```date.time``` : POSIXlt, Date and time of the measure, format Y-m-d HH:MM:OS
