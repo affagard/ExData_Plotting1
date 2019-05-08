@@ -11,7 +11,8 @@ Detailed instructions are listed in README.md
 
 ## Reading data source
 A single script ```data.global.power.consumption.inc.R``` load  and read data source. It may be called in scripts with ```source("data.global.power.consumption.inc.R")```.
-To easy rewiewing, code of this script has been pasted in each script.
+To ease rewiewing, code of this script has been pasted in each script, as asked.
+
  * ```df_hpc```: Dataframe result of reading for Household Power Consumption
  	* ```date.time``` : POSIXlt, Date and time of the measure, format Y-m-d HH:MM:OS
  	* ```active.power``` : Numeric, instant active power drawn off
@@ -24,8 +25,8 @@ To easy rewiewing, code of this script has been pasted in each script.
 
 ## Results
 4 scripts to generate 4 graphics as asked in README.md.
- * Scripts ```plotX.R``` (with X 1 to 4)
- * Images ```plotX.png``` (with X 1 to 4)
+ * Scripts ```plotX.R``` (for ```X``` 1 to 4)
+ * Images ```plotX.png``` (for ```X``` 1 to 4)
  
  ## Terms
   * This work has been performed with RStudio Version 1.1.463 on Mac OS X 10.14.4
